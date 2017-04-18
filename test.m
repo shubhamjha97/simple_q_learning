@@ -20,7 +20,7 @@ for iter=1:1000 %run for 1000 iterations
    end
   action=actionset(randi(numel(actionset))); %Select Random action
   next_state=action;
-  Q(state, action)=R(state,action)+gamma*(max(Q(next_state,:))); %This wont work. Check it. Now, it just might;
+  Q(state, action)=R(state,action)+gamma*(max(Q(next_state,:))); %Bellman's equation
   state=next_state;
 end
 
